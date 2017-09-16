@@ -42,6 +42,9 @@ function start() {
     'lines': 1,
   }[document.querySelector('input[name="draw-style"]:checked').value];
 
+  drawBackground(ctx);
+  window.scrollTo(0, 0);
+
   var sticksNumber = 2 ** iterationsNumber - 1;
 
   timer = setInterval(function(){
