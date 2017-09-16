@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Tree</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <canvas id="cnv" width="800" height="800">
+    </canvas>
+
+    <form>
+      <fieldset class="info">
+        <label>
+          Left stick angle:
+          <input type="number" id="left-stick-angle" value="30">
+        </label>
+        <label>
+          Right stick angle:
+          <input type="number" id="right-stick-angle" value="40">
+        </label>
+        <label>
+          Tree depth:
+          <input type="number" id="tree-depth" value="10">
+        </label>
+        <label>
+          Noise:
+          <input type="number" id="noise" value="0">
+        </label>
+        <label> Draw style </br>
+          <input type="radio" id="draw-lines" name="draw-style" value="lines" checked> Use lines </br>
+          <input type="radio" id="draw-circles" name="draw-style" value="circles"> Use circles</br>
+        </label>
+        <label class="hidden">
+          Circles in stick:
+          <input type="number" id="max-stick-points" value="7">
+        </label>
+        <label>
+          Draw interval:
+          <input type="number" id="draw-interval" value="20">
+        </label>
+      </fieldset>
+      <fieldset class="account-action">
+        <input class="btn" name="submit" value="Start" id="start-btn">
+        <input class="btn" name="submit" value="Stop" id="stop-btn">
+      </fieldset>
+    </form>
+
+    <script src="tree.js"></script>
+  </body>
+</html>
