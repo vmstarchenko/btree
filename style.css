@@ -19,8 +19,8 @@ body {
 
 canvas {
   display: block;
+  width: 100%;
   float: right;
-  height: 100%;
 }
 
 form {

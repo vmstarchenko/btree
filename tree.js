@@ -26,7 +26,9 @@ document.getElementById('draw-circles').onchange = function() {
 var timer = undefined;
 
 function start() {
-  stop()
+  stop();
+
+  fullScreen(cnv);
 
   var sticks=[new Stick(cnv.width/2,cnv.height*3/4,cnv.width/6,0)];
   var iterationsNumber = parseInt(treeDepthField.value);
@@ -173,4 +175,9 @@ function drawBackground(ctx) {
   ctx.clearRect(0, 0, cnv.width, cnv.height);
   ctx.fillStyle="black";
   ctx.fillRect(0,0,cnv.width,cnv.height);
+}
+
+function fullScreen(cnv) {
+  width = Math.min(window.innerWidth, window.innerHeight)  + "px";
+  cnv.style.width = width;
 }
